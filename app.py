@@ -1,5 +1,5 @@
 import streamlit as st
-from openai import OpenAI
+from groq import Groq
 from dotenv import load_dotenv
 import os
 
@@ -12,6 +12,14 @@ st.set_page_config(
     page_icon="🧪",
     layout="wide"
 )
+# --------------------------------------------------
+# Session Rate Limiting
+# --------------------------------------------------
+
+if "request_count" not in st.session_state:
+    st.session_state.request_count = 0
+
+MAX_REQUESTS = 2
 
 # --------------------------------------------------
 # Load Environment Variables
@@ -22,11 +30,11 @@ load_dotenv()
 api_key = None
 
 try:
-    api_key = st.secrets["OPENAI_API_KEY"]
+    api_key = st.secrets["GROQ_API_KEY"]
 except Exception:
-    api_key = os.getenv("OPENAI_API_KEY")
+    api_key = os.getenv("GROQ_API_KEY")
 
-client = OpenAI(api_key=api_key)
+client = Groq(api_key=api_key)
 
 # --------------------------------------------------
 # UI Header
@@ -235,8 +243,19 @@ Focus on:
 # Generate
 # --------------------------------------------------
 
+remaining = MAX_REQUESTS - st.session_state.request_count
+st.info(f"Demo Usage Remaining: {remaining}/{MAX_REQUESTS}")
+
 if st.button("Generate Test Cases"):
 
+    # Rate Limit Check
+    if st.session_state.request_count >= MAX_REQUESTS:
+        st.error(
+            "Demo limit reached. Maximum 2 generations are allowed per session."
+        )
+        st.stop()
+
+    # Empty Requirement Check
     if not story.strip():
         st.warning("Please enter a requirement.")
         st.stop()
@@ -322,7 +341,7 @@ Then generate the complete test suite.
         with st.spinner("Generating enterprise-grade test cases..."):
 
             response = client.chat.completions.create(
-                model="gpt-4.1-mini",
+                model="llama-3.3-70b-versatile",
                 messages=[
                     {
                         "role": "system",
@@ -333,10 +352,16 @@ Then generate the complete test suite.
                         "content": prompt
                     }
                 ],
-                temperature=0.2
+                temperature=0.2,
+                max_tokens=2500
             )
 
-            st.markdown(response.choices[0].message.content)
+            st.markdown(
+                response.choices[0].message.content
+            )
+
+            # Increment successful requests
+            st.session_state.request_count += 1
 
     except Exception as e:
         st.error(f"Error: {str(e)}")
