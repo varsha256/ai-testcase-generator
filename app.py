@@ -467,13 +467,20 @@ if st.sidebar.button("Load Blueprint into Editor", use_container_width=True):
 # --------------------------------------------------
 # 6. GLOBAL MAIN WORKSPACE FOOTER
 # --------------------------------------------------
+# ... All your right_workspace and button generation code goes above this ...
+# MAKE SURE there is NO 'with right_workspace:' or 'with left_workspace:' active above this point.
+
+
 # --------------------------------------------------
 # 6. GLOBAL MAIN WORKSPACE FOOTER
 # --------------------------------------------------
+# This line forces a break out of any remaining grid structures
+st.write(" ") 
+
 st.markdown("<br><br><br><hr style='border-color:#1F2937;'>", unsafe_allow_html=True)
 
 footer_html = """
-<div style="text-align: center; color: #6B7280; font-size: 0.85rem; padding-bottom: 20px;">
+<div style="text-align: center; color: #6B7280; font-size: 0.85rem; padding-bottom: 20px; width: 100%;">
     <p style="margin-bottom: 12px;">
         Built with ⚡ by <span style="color: #4F46E5; font-weight: 600;">Varsha Yadav</span> | Staff SDET & Test Architect
     </p>
@@ -494,9 +501,10 @@ footer_html = """
     </p>
     <p>
         Have feedback or feature requests? Reach out at 
-        <a href="mailto:varsha.y675423@gmail.com?subject=QA%20Stack%20Feedback" style="color: #9CA3AF; text-decoration: underline;">
+        <a href="mailto:varsha.y675423@gmail.com?subject=Feedback" style="color: #9CA3AF; text-decoration: underline;">
             varsha.y675423@gmail.com
         </a>
     </p>
 </div>
 """
+st.markdown(footer_html, unsafe_allow_html=True)
