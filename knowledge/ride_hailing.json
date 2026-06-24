@@ -1,0 +1,230 @@
+{
+  "domain": "Ride Hailing",
+
+  "industry_examples": [
+    "Uber",
+    "Grab",
+    "Gojek",
+    "Lyft",
+    "Ola"
+  ],
+
+  "core_business_objectives": [
+    "Reliable ride booking",
+    "Fast driver assignment",
+    "Accurate ETA",
+    "Accurate fare calculation",
+    "Payment success",
+    "Trip completion",
+    "Driver satisfaction",
+    "Rider satisfaction"
+  ],
+
+  "critical_user_journeys": [
+    "Account Registration",
+    "Login",
+    "Ride Booking",
+    "Driver Assignment",
+    "Ride Acceptance",
+    "Driver Arrival",
+    "Ride Start",
+    "Ride Tracking",
+    "Ride Completion",
+    "Payment",
+    "Receipt Generation",
+    "Cancellation",
+    "Refund"
+  ],
+
+  "distributed_system_focus": [
+    "Event Ordering",
+    "Eventual Consistency",
+    "Idempotency",
+    "Retry Mechanisms",
+    "Message Queue Processing",
+    "Cache Consistency",
+    "Microservice Communication",
+    "Data Replication"
+  ],
+
+  "ride_state_machine": [
+    "Requested",
+    "Searching Driver",
+    "Driver Assigned",
+    "Driver Accepted",
+    "Driver Arriving",
+    "Driver Reached",
+    "Ride Started",
+    "Ride In Progress",
+    "Ride Completed",
+    "Payment Pending",
+    "Payment Completed",
+    "Cancelled"
+  ],
+
+  "high_risk_areas": [
+    "Driver Assignment",
+    "Fare Calculation",
+    "GPS Accuracy",
+    "Surge Pricing",
+    "Trip State Management",
+    "Payment Processing",
+    "Wallet Deductions",
+    "Refund Processing",
+    "Push Notifications",
+    "Promotion Engine"
+  ],
+
+  "production_incidents_observed": [
+    "Same driver assigned to multiple riders",
+    "Driver sees ride but rider does not",
+    "Ride stuck in assigned state",
+    "Ride stuck in started state",
+    "Payment deducted twice",
+    "Fare mismatch between estimate and actual",
+    "GPS drift",
+    "Incorrect surge multiplier",
+    "Push notifications delayed",
+    "Trip completion event lost",
+    "Driver payout mismatch",
+    "Wallet balance inconsistency",
+    "Promo code abuse"
+  ],
+
+  "driver_assignment_testing": [
+    "Nearest driver selection",
+    "Driver timeout handling",
+    "Driver rejection handling",
+    "Driver reassignment",
+    "Driver offline during assignment",
+    "Simultaneous booking requests",
+    "Load testing dispatch service"
+  ],
+
+  "gps_testing": [
+    "GPS drift",
+    "Weak GPS signal",
+    "Indoor GPS",
+    "Airport pickup zones",
+    "Geofence validation",
+    "Location spoofing",
+    "Network switching during trip"
+  ],
+
+  "fare_engine_testing": [
+    "Surge pricing",
+    "Distance calculation",
+    "Time calculation",
+    "Toll charges",
+    "Night charges",
+    "Airport fees",
+    "Promo discounts",
+    "Rounding rules"
+  ],
+
+  "payment_testing": [
+    "Wallet",
+    "Card",
+    "Cash",
+    "UPI",
+    "Payment retries",
+    "Duplicate charges",
+    "Refund failures",
+    "Payment reconciliation"
+  ],
+
+  "security_focus": [
+    "Fake GPS detection",
+    "OTP bypass attempts",
+    "Promo abuse",
+    "Payment fraud",
+    "Driver identity spoofing",
+    "Account takeover",
+    "Session hijacking"
+  ],
+
+  "fraud_vectors": [
+    "Ride farming",
+    "Driver-rider collusion",
+    "Fake ride completion",
+    "Promo exploitation",
+    "Referral abuse",
+    "Location spoofing"
+  ],
+
+  "performance_focus": [
+    "Peak hour demand",
+    "Large scale ride requests",
+    "Massive driver assignment load",
+    "Surge pricing recalculation",
+    "Payment gateway latency",
+    "Notification delivery latency"
+  ],
+
+  "chaos_testing_scenarios": [
+    "Dispatch service unavailable",
+    "Payment service timeout",
+    "GPS provider outage",
+    "Notification service failure",
+    "Database failover",
+    "Cache outage",
+    "Message queue delay"
+  ],
+
+  "network_failure_scenarios": [
+    "Internet disconnect before booking",
+    "Internet disconnect after assignment",
+    "Internet disconnect during ride",
+    "Internet disconnect before payment",
+    "App kill and relaunch",
+    "Device restart during trip"
+  ],
+
+  "concurrency_testing": [
+    "1000 simultaneous ride requests",
+    "Driver accepts multiple rides simultaneously",
+    "Ride cancellation during assignment",
+    "Concurrent wallet updates",
+    "Concurrent payment retries"
+  ],
+
+  "database_validation": [
+    "Trip record consistency",
+    "Payment reconciliation",
+    "Driver payout accuracy",
+    "Wallet balance accuracy",
+    "Duplicate trip prevention"
+  ],
+
+  "observability_checks": [
+    "Request tracing",
+    "Distributed logs",
+    "Dispatch latency metrics",
+    "Payment success metrics",
+    "Trip completion metrics",
+    "Notification delivery metrics"
+  ],
+
+  "release_blockers": [
+    "Incorrect fare calculation",
+    "Driver assignment failure",
+    "Trip completion failure",
+    "Duplicate payment deduction",
+    "Refund failure",
+    "GPS failure",
+    "Payment reconciliation mismatch"
+  ],
+
+  "principal_sdet_expectations": [
+    "Generate state transition tests",
+    "Generate idempotency tests",
+    "Generate retry tests",
+    "Generate resilience tests",
+    "Generate concurrency tests",
+    "Generate failure recovery tests",
+    "Generate fraud scenarios",
+    "Generate distributed systems test cases",
+    "Prioritize production incident prevention",
+    "Prioritize revenue protection"
+  ]
+}

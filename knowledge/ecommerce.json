@@ -1,0 +1,120 @@
+{
+  "domain": "Ecommerce",
+
+  "industry_examples": [
+    "Amazon",
+    "Flipkart",
+    "Shopee",
+    "Alibaba",
+    "eBay"
+  ],
+
+  "core_business_objectives": [
+    "Product Discovery",
+    "Order Conversion",
+    "Inventory Accuracy",
+    "Revenue Growth",
+    "Customer Satisfaction"
+  ],
+
+  "critical_user_journeys": [
+    "Registration",
+    "Login",
+    "Product Search",
+    "Product Detail View",
+    "Add To Cart",
+    "Checkout",
+    "Payment",
+    "Order Tracking",
+    "Return",
+    "Refund"
+  ],
+
+  "high_risk_areas": [
+    "Search Relevance",
+    "Inventory Synchronization",
+    "Checkout",
+    "Promotions",
+    "Pricing",
+    "Payment Processing",
+    "Order Fulfillment"
+  ],
+
+  "production_incidents_observed": [
+    "Inventory overselling",
+    "Duplicate orders",
+    "Incorrect pricing",
+    "Promo applied twice",
+    "Payment captured but order failed",
+    "Order status stuck",
+    "Refund delay"
+  ],
+
+  "search_testing": [
+    "Partial Match",
+    "Typo Tolerance",
+    "Ranking Relevance",
+    "Synonym Search",
+    "Empty Results"
+  ],
+
+  "cart_testing": [
+    "Quantity Updates",
+    "Inventory Validation",
+    "Price Recalculation",
+    "Promotion Recalculation"
+  ],
+
+  "checkout_testing": [
+    "Address Validation",
+    "Shipping Calculation",
+    "Tax Calculation",
+    "Payment Retry"
+  ],
+
+  "security_focus": [
+    "Coupon Abuse",
+    "Price Manipulation",
+    "Session Hijacking",
+    "Unauthorized Access",
+    "API Authorization"
+  ],
+
+  "fraud_vectors": [
+    "Coupon Abuse",
+    "Fake Orders",
+    "Refund Fraud",
+    "Promotion Exploitation",
+    "Account Takeover"
+  ],
+
+  "performance_focus": [
+    "Flash Sale",
+    "Mega Sale",
+    "Checkout Traffic Spike",
+    "Inventory Update Storm"
+  ],
+
+  "database_validation": [
+    "Inventory Consistency",
+    "Order Consistency",
+    "Price Consistency",
+    "Refund Reconciliation"
+  ],
+
+  "release_blockers": [
+    "Payment Success Order Failure",
+    "Inventory Corruption",
+    "Price Mismatch",
+    "Checkout Failure",
+    "Refund Failure"
+  ],
+
+  "principal_sdet_expectations": [
+    "Inventory Race Condition Testing",
+    "Promotion Engine Validation",
+    "Checkout Reliability Testing",
+    "Search Quality Validation",
+    "Failure Recovery Testing"
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "domain": "Banking",
+
+  "industry_examples": [
+    "JPMorgan",
+    "HSBC",
+    "Citibank",
+    "HDFC",
+    "ICICI",
+    "DBS"
+  ],
+
+  "core_business_objectives": [
+    "Financial Accuracy",
+    "Regulatory Compliance",
+    "Customer Trust",
+    "Transaction Security"
+  ],
+
+  "critical_user_journeys": [
+    "Account Opening",
+    "Login",
+    "Fund Transfer",
+    "Beneficiary Addition",
+    "Bill Payment",
+    "Fixed Deposit",
+    "Loan Application",
+    "Statement Download"
+  ],
+
+  "high_risk_areas": [
+    "Fund Transfer",
+    "Beneficiary Validation",
+    "Transaction Limits",
+    "Interest Calculation",
+    "Account Balance",
+    "Audit Logging"
+  ],
+
+  "production_incidents_observed": [
+    "Funds debited twice",
+    "Beneficiary validation failure",
+    "Incorrect account balance",
+    "Duplicate NEFT transaction",
+    "Transaction timeout",
+    "Interest calculation defect",
+    "Statement mismatch"
+  ],
+
+  "security_focus": [
+    "MFA",
+    "Transaction Authorization",
+    "Privilege Escalation",
+    "Sensitive Data Leakage",
+    "Session Fixation",
+    "Credential Stuffing"
+  ],
+
+  "regulatory_focus": [
+    "KYC",
+    "AML",
+    "Audit Trail",
+    "GDPR",
+    "PCI DSS"
+  ],
+
+  "performance_focus": [
+    "Month-End Processing",
+    "Salary Credit Peak Load",
+    "Concurrent Transfers",
+    "Batch Processing"
+  ],
+
+  "database_validation": [
+    "Account Balance Consistency",
+    "Transaction Atomicity",
+    "Audit Log Completeness",
+    "Reconciliation"
+  ],
+
+  "release_blockers": [
+    "Incorrect Balance",
+    "Fund Loss",
+    "Audit Failure",
+    "Security Breach",
+    "Regulatory Non-Compliance"
+  ],
+
+  "principal_sdet_expectations": [
+    "Ledger Testing",
+    "Audit Validation",
+    "Security Testing",
+    "Transaction Recovery",
+    "Data Consistency Validation"
+  ]
+}

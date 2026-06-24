@@ -1,0 +1,268 @@
+{
+"domain": "FinTech",
+
+"industry_examples": [
+"Paytm",
+"PhonePe",
+"Google Pay",
+"Razorpay",
+"Stripe",
+"Wise",
+"Revolut"
+],
+
+"core_business_objectives": [
+"Secure onboarding",
+"Reliable payments",
+"Fraud prevention",
+"Transaction integrity",
+"Regulatory compliance",
+"User trust",
+"Customer identity verification",
+"Financial data protection",
+"Operational resilience"
+],
+
+"critical_user_journeys": [
+"Registration",
+"Mobile Verification",
+"KYC",
+"Bank Account Linking",
+"Wallet Top-up",
+"Money Transfer",
+"Bill Payment",
+"Merchant Payment",
+"Refund",
+"Transaction History",
+"Profile Creation",
+"Device Registration",
+"Password Reset",
+"Account Recovery"
+],
+
+"registration_context": {
+"otp_validity_minutes": 5,
+"max_otp_attempts": 3,
+"max_resend_attempts_per_hour": 5,
+"otp_single_use": true,
+"resend_invalidates_previous_otp": true,
+"duplicate_customer_prevention": true,
+"audit_logging_required": true,
+"consent_capture_required": true,
+"multi_device_validation_required": true,
+"rate_limiting_enabled": true
+},
+
+"high_risk_areas": [
+"OTP Verification",
+"KYC",
+"Payment Processing",
+"Transaction Ledger",
+"Wallet Balance",
+"Bank Integration",
+"Refund Processing",
+"Fraud Detection",
+"Profile Creation",
+"Identity Verification",
+"Authentication",
+"Session Management"
+],
+
+"production_incidents_observed": [
+"Money debited but transfer failed",
+"Duplicate transactions",
+"Wallet balance mismatch",
+"Incorrect transaction status",
+"Delayed bank callbacks",
+"Refund not credited",
+"KYC verification failure",
+"Duplicate account creation",
+"OTP delivery failure",
+"OTP accepted after expiration",
+"OTP reuse vulnerability",
+"User profile created multiple times",
+"Fraudulent registrations",
+"Registration service outage"
+],
+
+"otp_testing_focus": [
+"Valid OTP Verification",
+"Invalid OTP Verification",
+"Expired OTP Handling",
+"OTP Replay Attack Prevention",
+"OTP Resend Validation",
+"OTP Delivery Failure",
+"OTP Delay Handling",
+"OTP Rate Limiting",
+"OTP Brute Force Protection",
+"OTP Session Binding",
+"OTP Device Binding",
+"Latest OTP Validation",
+"Concurrent OTP Requests",
+"SMS Gateway Failure"
+],
+
+"payment_testing": [
+"UPI",
+"Wallet",
+"Card",
+"Net Banking",
+"Bank Callback Handling",
+"Payment Retry Logic",
+"Duplicate Transaction Prevention",
+"Reconciliation",
+"Idempotency Validation",
+"Transaction Rollback",
+"Failure Recovery",
+"Settlement Validation"
+],
+
+"security_focus": [
+"OTP Brute Force",
+"Account Takeover",
+"Transaction Tampering",
+"Session Hijacking",
+"PII Exposure",
+"API Authorization",
+"Rate Limiting",
+"Mobile Number Enumeration",
+"Replay Attack",
+"Credential Stuffing",
+"Sensitive Data Logging",
+"Rooted Device Detection",
+"Jailbreak Detection",
+"Secure Session Expiry"
+],
+
+"fraud_vectors": [
+"Fake Accounts",
+"Synthetic Identity Fraud",
+"Promo Abuse",
+"Money Laundering",
+"Transaction Replay",
+"Referral Abuse",
+"Device Farming",
+"OTP Farming",
+"SIM Swap Fraud",
+"Account Multiplication",
+"Velocity Abuse",
+"Bot Registrations"
+],
+
+"compliance_requirements": [
+"KYC Compliance",
+"AML Compliance",
+"Audit Trail Validation",
+"User Consent Validation",
+"Privacy Policy Acceptance",
+"Terms And Conditions Acceptance",
+"PII Data Protection",
+"Data Retention Compliance",
+"Regulatory Reporting"
+],
+
+"mobile_app_testing": [
+"Network Switching",
+"Airplane Mode",
+"App Backgrounding",
+"App Force Kill",
+"Low Connectivity",
+"Offline Recovery",
+"Push Notification Delivery",
+"Device Rotation",
+"Multi Device Registration",
+"App Upgrade Scenarios"
+],
+
+"observability_focus": [
+"OTP Sent Event",
+"OTP Verified Event",
+"OTP Failure Event",
+"Registration Completed Event",
+"Registration Failed Event",
+"Fraud Detection Event",
+"Audit Log Validation",
+"Monitoring Alert Validation",
+"Error Tracking Validation"
+],
+
+"performance_focus": [
+"Peak Payment Traffic",
+"Massive Concurrent Transactions",
+"Payment Gateway Latency",
+"Bank Timeout Handling",
+"High Volume Registrations",
+"Concurrent OTP Requests",
+"SMS Gateway Throughput",
+"Registration SLA Validation"
+],
+
+"resilience_testing": [
+"SMS Gateway Outage",
+"Database Failure",
+"Cache Failure",
+"Service Restart Recovery",
+"Partial Registration Recovery",
+"Retry Mechanism Validation",
+"Graceful Degradation",
+"Circuit Breaker Validation"
+],
+
+"database_validation": [
+"Ledger Consistency",
+"Transaction Atomicity",
+"Balance Consistency",
+"Reconciliation Accuracy",
+"Profile Creation Consistency",
+"Audit Log Persistence",
+"Duplicate Customer Prevention",
+"Referential Integrity"
+],
+
+"release_blockers": [
+"Money Loss",
+"Duplicate Transactions",
+"Balance Mismatch",
+"Payment Success Failure",
+"Incorrect Ledger Entries",
+"Unauthorized Access",
+"OTP Security Bypass",
+"Duplicate Customer Creation",
+"Fraud Exploitation",
+"Compliance Violation"
+],
+
+"principal_sdet_expectations": [
+"ACID Validation",
+"Transaction Integrity Testing",
+"Fraud Testing",
+"Reconciliation Testing",
+"Failure Recovery Testing",
+"Idempotency Validation",
+"Security Testing",
+"Compliance Testing",
+"Observability Validation",
+"Distributed System Testing",
+"Chaos Testing",
+"Risk Based Testing"
+],
+
+"test_generation_categories": [
+"Functional",
+"Negative",
+"Boundary",
+"Security",
+"Fraud",
+"Compliance",
+"Accessibility",
+"Mobile",
+"API",
+"Database",
+"Performance",
+"Reliability",
+"Recovery",
+"Observability",
+"Integration",
+"Concurrency",
+"Data Integrity"
+]}
